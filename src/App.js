@@ -1,12 +1,12 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Navbar from './components/layouts/Navbar';
+import Navbar from "./components/layouts/Navbar";
 import Index from "./components/layouts/Index";
+import Lyrics from "./components/tracks/Lyrics";
 
-
-import {Provider} from './context';
+import { Provider } from "./context";
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
           <div className="container">
             <Switch>
               <Route exact path="/" component={Index} />
+              <Route path="/lyrics/track/:id" component={Lyrics} />
             </Switch>
           </div>
         </React.Fragment>
